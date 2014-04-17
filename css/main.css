@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "DIN Pro";
+    src: url('../fonts/DINPro-Medium.otf');
+    font-style:normal;
+    font-weight:normal;
+}
+
+html{
+    font-size:87.5%
+}
+
+body{
+    padding-top:117px;
+    padding-top:8.35714rem;
+    -webkit-transition:0.1s padding-top ease-in-out;
+    -moz-transition:0.1s padding-top ease-in-out;
+    -o-transition:0.1s padding-top ease-in-out;
+    transition:0.1s padding-top ease-in-out;
+    font-family:"Din Pro",Helvetica,Arial,sans-serif;
+}
+
+
+::-moz-selection{
+    background:#06c5fc;
+    color:white;
+    text-shadow:none
+}
+
+::selection{
+    background:#06c5fc;
+    color:white;
+    text-shadow:none
+}
+
+
+.site-header{
+    background : #161D28;
+  background : rgba(22, 29, 40, 1);
+    height:99px;
+    border-bottom:1px solid #e6e6e6;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;
+}
+
+
+.site-logo{
+    background:url("../images/Untitled-4_icon.svg") 0 0 no-repeat scroll transparent;
+height: 99px;
+position: absolute;
+margin-left: -48px;
+left: 48%;
+width: 230px;
+ top:30.96px;
+}
+
+.ie7 .site-logo, .ie8 .site-logo{
+    background-image:none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/_inc/img/logo.png',sizingMethod='scale');
+    -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/_inc/img/logo.png',sizingMethod='scale')"
+}
+  
+    .nav-list li:nth-child(4){
+        margin-left:16em
+    }
+
+
+    .nav-list{
+        list-style:none;
+        text-align:center;
+        margin:0px;
+        padding:0px;
+    }
+
+    .nav-list li {
+        position:relative;
+        display:inline;
+          margin:40px 20px 0 20px;
+        line-height:85px;
+        text-transform:uppercase;
+        -webkit-transition:0.2s all ease-in-out;
+        -moz-transition:0.2s all ease-in-out;
+        -o-transition:0.2s all ease-in-out;
+        transition:0.2s all ease-in-out
+    }
+
+
+.nav-list li a{
+ /* color: #5B5B5B;*/
+  color: rgb(150, 150, 150);
+  text-decoration:none;
+    font-family:"DIN-PRO",Helvetica,Arial,sans-serif;
+        font-style:normal;
+        font-size:12px
+    }
+
+/*@media (max-width:760px) {
+  .nav-list li:nth-child(4) {
+    display:none;
+  }
+  .site-header {
+    height:135px;
+  }
+  .nav-list li {
+    margin-top:95px;
+  }
+}*/
+
+@media only screen and (max-width :760px) {
+ .nav-list li:nth-child(4){
+        margin-left:auto
+    }
+
+ .nav-list {
+  margin-top:95px;
+  }
+.nav-list li {
+ margin:20px 5% 0 5%;
+}
+.site-header {
+    height:160px;
+  }
+
+}
+
+@media only screen and (max-width :400px) {
+ .nav-list {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px){
+  
+
+}
+
+
+@media screen and (min-width: 760px){
+   
+
+  
+
+}
+
+
+@media screen and (min-width: 960px){
+  
+
+}
