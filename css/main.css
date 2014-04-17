@@ -19,6 +19,11 @@ body{
     font-family:"Din Pro",Helvetica,Arial,sans-serif;
 }
 
+.wrapper {
+min-height:100%;
+position:relative;
+}
+
 .site-header{
 background : #161D28;
   background : rgba(22, 29, 40, 1);
@@ -45,15 +50,17 @@ top:30.96px;
 z-index:90
 }
 
-.cover-image {
-    background:url("../images/Untitled-6-01.svg") 0 0 no-repeat scroll transparent;
+.cover-image2::after {
+    content:"";
+     background:url("../images/Untitled-6-01.svg") 0 0 no-repeat transparent;
      background-repeat : no-repeat;
   opacity : 0.8;
   filter:alpha(opacity=10) progid:DXImageTransform.Microsoft.Alpha(opacity=10);
 height: 99px;
 position: absolute;
-margin-left: -48px;
-left: 38%;
+margin: 0px auto;
+left: 10%;
+right:0;
 width: 560px;
  top:0px;
   z-index:0
@@ -113,52 +120,97 @@ width: 560px;
         font-size:12px
     }
 
-@media only screen and (max-width :1000px) { 
+/* Footer */
 
+.site-bottom {
+    width:100%;
+    height:40px;
+    position:fixed;
+    bottom:0;
+    background:red;
+    z-index:300
+}
 
-
+.site-bottom::before {
+    content:"";
+   background:url('../images/logo-bottom.png') transparent;
+    height:40px;
+    top:0;
+    left:0;
+    right:0;
+    position:absolute;
+    bottom:0;
 }
 
 
+.site-bottom-img {
+   position:fixed;  
+}
+
+@media only screen and (max-width: 1090px) { 
+  
+    .nav-list li {
+        margin:20px 2% 0;
+    }
+
+}
+
 @media only screen and (max-width :900px) {
     .nav-list li:nth-child(4){
-        margin-left:3%;
-    }
-    
+        margin-left:4%;
+    }  
     .nav-list {
-        margin-top:70px;
-    }
+        margin-top:99px;
+        overflow:hidden;
+        background: #161D28;
+        border-top:1px yellow solid;
+        background-blend-mode: multiply;
+       height:40px;
+       padding-bottom:30px
+    } 
     .nav-list li {
-        margin:20px 3% 0 3%;
-    }
-    .site-header {
-        height:160px;
-    }
-    
+        margin:0px 3% 0px 3%;
+    }  
     .site-logo{
         background:url("../images/Untitled-4_icon.svg") 0 0 no-repeat scroll transparent;
         height: 99px;
         position: absolute;
         margin-left: -112px;
         left: 50%;
-        width: 230px;
+        width: 270px;
         top:30.96px;
     }
 
 }
-
-@media only screen and (max-width :650px) {
- .nav-list li {
-        margin:20px 2% 0 2%;
-    }
-}
-
-
-@media only screen and (max-width :320px) {
+@media only screen and (max-width: 670px) {
     .nav-list {
         display:none;
     }
     #menu_dd{
         display:block;
+    }
+    
+    .nav-list {
+        margin:0px;
+    }
+    
+     #menu {
+      background : #161D28;  
+    }
+    
+    #menu li {
+        display:inline-block
+    }
+    
+      #menu li:nth-child(4){
+        margin-left:19.5em;
+         
+    }
+    
+   .site-header {
+        height:130px;
+    }
+    .site-logo{
+        width: 270px;
     }
 }

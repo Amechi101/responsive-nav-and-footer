@@ -19,6 +19,28 @@
    
     <!--*****Need JS Libraries in head ************ -->
     <script src="js/lib/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+    
+jQuery(document).ready(function($) {
+    $("#menu_dd").on('click', function (){
+        $("#menu").slideToggle();
+      
+    });
+  
+  $(window).on('resize', function(){
+      var win = $(this); //this = window
+      if (win.width() >= 670) { 
+       $('#menu').css({
+            display: 'block'
+            });
+        } else {
+            $('#menu').css({
+            display: 'none'
+          });
+      }
+  });
+});
+    </script>
    
         
     <!--
@@ -34,9 +56,9 @@
         <!-- Wrapper for page content -->
         <div class="wrapper">
            <header class="site-header">
-                    <div class="cover-image"></div>
-                    <a href="#" class="site-logo"></a>
+                <div class="cover-image2"><a href="#" class="site-logo"></a></div>
                 <nav role="navigation">
+                    <div id="menu_dd">menu dropdown</div>
                     <ul class="nav-list" id="menu">
                         <li><a href="#">LOCATION</a></li>
                         <li><a href="#">AVAILABILITIES</a></li>
@@ -45,24 +67,14 @@
                         <li><a href="#">NEWS</a></li>
                         <li><a href="#">CONTACT</a></li>
                     </ul>
-                    <div id="menu_dd">menu dropdown</div>
                     
-                    <div id="menu_dropdown" style="display:none;">
-                        <ul>
-                            <li><a href="#">LOCATION</a></li>
-                            <li><a href="#">AVAILABILITIES</a></li>
-                            <li><a href="#">BUILDING SPECS</a></li>
-                            <li><a href="#">GALLERY</a></li>
-                            <li><a href="#">NEWS</a></li>
-                            <li><a href="#">CONTACT</a></li>
-                        </ul>
-                    
-                    </div>
                 </nav>
             </header><!--Header End -->
             
 
             <footer>
+                <div class="site-bottom"></div>
+                <img class="site-bottom-img" src="images/footer.png" ></img>
             </footer><!--Footer End -->
         </div>
 
