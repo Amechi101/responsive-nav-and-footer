@@ -18,29 +18,8 @@
 
    
     <!--*****Need JS Libraries in head ************ -->
-    <script src="js/lib/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript">
+    <script src="js/lib/modernizr.custom.48865.js"></script>
     
-jQuery(document).ready(function($) {
-    $("#menu_dd").on('click', function (){
-        $("#menu").slideToggle();
-      
-    });
-  
-  $(window).on('resize', function(){
-      var win = $(this); //this = window
-      if (win.width() >= 670) { 
-       $('#menu').css({
-            display: 'block'
-            });
-        } else {
-            $('#menu').css({
-            display: 'none'
-          });
-      }
-  });
-});
-    </script>
    
         
     <!--
@@ -56,10 +35,13 @@ jQuery(document).ready(function($) {
         <!-- Wrapper for page content -->
         <div class="wrapper">
            <header class="site-header">
-                <div class="cover-image2"><a href="#" class="site-logo"></a></div>
+                <a href="#" class="site-logo"></a>
+                <div class="header-image" >
+                    <img src="images/Untitled-6-01.svg"></img>
+                </div>
                 <nav role="navigation">
-                    <div id="menu_dd">menu dropdown</div>
-                    <ul class="nav-list" id="menu">
+                    <a href="#" class="mobile-menu-trigger"><span></span>MENU</a>
+                    <ul class="nav-list" id="mobile-menu-nav">
                         <li><a href="#">LOCATION</a></li>
                         <li><a href="#">AVAILABILITIES</a></li>
                         <li><a href="#">BUILDING SPECS</a></li>
@@ -72,12 +54,42 @@ jQuery(document).ready(function($) {
             </header><!--Header End -->
             
 
-            <footer>
-                <div class="site-bottom"></div>
-                <img class="site-bottom-img" src="images/footer.png" ></img>
+            <footer class="site-bottom">
+                <div class="site-bottom-img">
+                    <img  src="images/footer.png" ></img>
+                </div>
+                <div class="site-bottom-logos">
+                    <img src="images/logo-bottom-1.png" />
+                    <img src="images/logo-bottom-2.png" />
+                </div>   
             </footer><!--Footer End -->
         </div>
 
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        
+        <script src="js/lib/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".mobile-menu-trigger").on('click', function (){
+                    $("#mobile-menu-nav").slideToggle();
+                });
+
+                $(window).on('resize', function(){
+                    var win = $(this); //this = window
+                    if (win.width() >= 670) { 
+                        $('#mobile-menu-nav').css({
+                            display: 'block'
+                        });
+                    } else {
+                        $('#mobile-menu-nav').css({
+                            display: 'none'
+                        });
+                    }
+                });
+            });
+        </script>
 
     </body>
 </html>
