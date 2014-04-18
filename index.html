@@ -2,11 +2,11 @@
 <!--[if lt IE 7]><html class="ie6"><![endif]-->
 <!--[if IE 7]><html class="ie7"><![endif]-->
 <!--[if IE 8]><html class="ie8"><![endif]-->
-<!--[if gt IE 8]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
     <title>Responsive Nav & Footer</title>
-    <meta name="description" content="">
+    <meta name="description" content="Responsive Nav & Footer">
     <meta name="author" content="Amechi Egbe">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
   	<!--   CSS LINKS -->
@@ -14,14 +14,7 @@
     <!--  CSS for other styles  -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  
-
-   
-    <!--*****Need JS Libraries in head ************ -->
-    <script src="js/lib/modernizr.custom.48865.js"></script>
     
-   
-        
     <!--
     This script enables structural HTML5 elements in old IE.
     http://code.google.com/p/html5shim/ -->
@@ -49,7 +42,6 @@
                         <li><a href="#">NEWS</a></li>
                         <li><a href="#">CONTACT</a></li>
                     </ul>
-                    
                 </nav>
             </header><!--Header End -->
             
@@ -72,24 +64,37 @@
         <script src="js/lib/jquery-1.11.0.min.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
-                $(".mobile-menu-trigger").on('click', function (){
+                
+                //Global definition
+                var trigger = $(".mobile-menu-trigger");
+                
+                trigger.on('click', function (){
                     $("#mobile-menu-nav").slideToggle();
+                });
+                
+                trigger.on('click', function() {
+                    $('.mobile-menu-trigger .mobile-active').removeClass('mobile-active');
+                    $(this).toggleClass('mobile-active');
+                });
+                
+                trigger.on('click', function() {
+                    $('.mobile-menu-trigger .active').removeClass('active');
+                    $(this).toggleClass('active');
                 });
 
                 $(window).on('resize', function(){
                     var win = $(this); //this = window
-                    if (win.width() >= 670) { 
-                        $('#mobile-menu-nav').css({
+                        if (win.width() >= 670) { 
+                            $('#mobile-menu-nav').css({
                             display: 'block'
                         });
-                    } else {
-                        $('#mobile-menu-nav').css({
+                        } else {
+                            $('#mobile-menu-nav').css({
                             display: 'none'
                         });
                     }
                 });
             });
         </script>
-
     </body>
 </html>
