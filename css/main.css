@@ -121,13 +121,17 @@ body{
     .nav-list li {
         position:relative;
         display:inline;
-        margin:2.2em 2.2em 0 2.2em;
+        margin:0em 1.2em 0 1.2em;
         line-height:5.917em;
         text-transform:uppercase;
     }
     
     .nav-list li:nth-child(4){
-        margin-left:17.5em;    
+        margin-left:12.5em;    
+    }
+
+ .nav-list li:nth-child(3){
+        margin-right:13.5em;    
     }
 
     .nav-list li a {
@@ -183,9 +187,9 @@ body{
 
 
 
-@media only screen and (max-width: 1090px) { 
+@media only screen and (max-width: 1010px) { 
     .nav-list li {
-        margin:20px 2% 0;
+        margin:20px 1% 0;
     }
     
        .site-bottom-img {
@@ -197,8 +201,12 @@ margin-left:-100px;
 
 @media only screen and (max-width :900px) {
     .nav-list li:nth-child(4){
-        margin-left:4%;
+        margin-left:0em;
     }  
+    
+    .nav-list li:nth-child(3){
+        margin-right:3.5em;    
+    }
     .nav-list {
         margin-top:99px;
         overflow:hidden;
@@ -294,7 +302,7 @@ margin-left:-100px;
         background: #161D28;
         border:none;
        padding-bottom:0px;
-            clear:both
+            display:table;
     }
 
     #mobile-menu-nav {
@@ -303,24 +311,39 @@ margin-left:-100px;
     }
 
 
-     #mobile-menu-nav li {
-       clear:both
+    
+    #mobile-menu-nav li:nth-child(1) {
+        display:table-row; 
+       
     }
     
-    #mobile-menu-nav li:nth-child(1),
-    #mobile-menu-nav li:nth-child(2),
+    #mobile-menu-nav li:nth-child(2) {
+        display:table-row; 
+    }
+    
     #mobile-menu-nav li:nth-child(3) {
-        display:block;
-        float:left;
-          
+        display:table-row;
+       
     }
     
-    #mobile-menu-nav li:nth-child(4),
-    #mobile-menu-nav li:nth-child(5),
-    #mobile-menu-nav li:nth-child(6) {
-        display:block;
-        float:right;
-        
+    #mobile-menu-nav li:nth-child(4) {
+       
+         display:table-row;  
+    }
+    
+     #mobile-menu-nav li:nth-child(5) {
+    
+         display:table-row;  
+    }
+    
+     #mobile-menu-nav li:nth-child(6) {
+   
+         display:table-row;  
+    }
+  
+    
+  .nav-list li:nth-child(3) {
+       margin-right: 0em;
     }
     
     .header-image img {
