@@ -80,25 +80,25 @@
                 //Global definition
                 var trigger = $(".mobile-menu-trigger");
                 
-                trigger.on('click', function (){
-                    $("#mobile-menu-nav").slideToggle();
-                });
-                
                 trigger.on('click', function() {
+                    // Moving the mobile menu up/down
+                    $("#mobile-menu-nav").slideToggle();
+                    
+                    // For mobile menu  trigger functionailty
                     $('.mobile-menu-trigger .mobile-active').removeClass('mobile-active');
                     $(this).toggleClass('mobile-active');
-                });
-                
-                trigger.on('click', function() {
-                    $('.mobile-menu-trigger .active').removeClass('mobile-menu-trigger.active');
-                    $(this).toggleClass('mobile-menu-trigger.active');
+
+                    // For alt icon functionality
+                    $('.mobile-menu-trigger .active').removeClass('active');
+                    $(this).toggleClass('active');
                 });
 
                 $(window).on('resize', function(){
                     var win = $(this); //this = window
                         if (win.width() >= 670) { 
                             $('#mobile-menu-nav').css({
-                            display: 'block'
+                            display: 'block',
+                            fontSize: 0
                         });
                         } else {
                             $('#mobile-menu-nav').css({
