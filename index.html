@@ -27,20 +27,32 @@
 
         <!-- Wrapper for page content -->
         <div class="wrapper">
-           <header class="site-header">
+            <header class="site-header">
                 <a href="#" class="site-logo"></a>
                 <div class="header-image" >
                     <img src="images/Untitled-6-01.svg"></img>
                 </div>
                 <nav role="navigation">
-                    <a href="#" class="mobile-menu-trigger"><span></span>MENU</a>
-                    <ul class="nav-list" id="mobile-menu-nav">
+                <a href="#" class="mobile-menu-trigger"><span></span>MENU</a>
+                    <ul class="nav-list" >
                         <li><a href="#">LOCATION</a></li>
                         <li><a href="#">AVAILABILITIES</a></li>
                         <li><a href="#">BUILDING SPECS</a></li>
                         <li><a href="#">GALLERY</a></li>
                         <li><a href="#">NEWS</a></li>
                         <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <nav id="mobile-menu-nav">
+                    <ul class="mobile-menu-one menu">
+                        <li><a href="#">GALLERY</a></li>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">CONTACT</a></li>              
+                    </ul>
+                    <ul class="mobile-menu-two menu">
+                        <li><a href="#">LOCATION</a></li>
+                        <li><a href="#">AVAILABILITIES</a></li>
+                        <li><a href="#">BUILDING SPECS</a></li> 
                     </ul>
                 </nav>
             </header><!--Header End -->
@@ -78,8 +90,8 @@
                 });
                 
                 trigger.on('click', function() {
-                    $('.mobile-menu-trigger .active').removeClass('active');
-                    $(this).toggleClass('active');
+                    $('.mobile-menu-trigger .active').removeClass('mobile-menu-trigger.active');
+                    $(this).toggleClass('mobile-menu-trigger.active');
                 });
 
                 $(window).on('resize', function(){
