@@ -33,7 +33,7 @@
                     <img src="images/Untitled-6-01.svg"></img>
                 </div>
                 <nav role="navigation">
-                <a href="#" class="mobile-menu-trigger"><span></span>MENU</a>
+                <a href="#" class="mobile-menu-trigger"><span class="mobile-menu-span"></span>MENU</a>
                     <ul class="nav-list" >
                         <li><a href="#">LOCATION</a></li>
                         <li><a href="#">AVAILABILITIES</a></li>
@@ -44,23 +44,23 @@
                     </ul>
                 </nav>
                 <nav id="mobile-menu-nav">
-                    <ul class="mobile-menu-one menu">
-                        <li><a href="#">GALLERY</a></li>
-                        <li><a href="#">NEWS</a></li>
-                        <li><a href="#">CONTACT</a></li>              
-                    </ul>
-                    <ul class="mobile-menu-two menu">
+                    <ul class="mobile-menu-one">
                         <li><a href="#">LOCATION</a></li>
                         <li><a href="#">AVAILABILITIES</a></li>
-                        <li><a href="#">BUILDING SPECS</a></li> 
+                        <li><a href="#">BUILDING SPECS</a></li>
+                    </ul>
+                    <ul class="mobile-menu-two">
+                        <li><a href="#">GALLERY</a></li>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">CONTACT</a></li>
                     </ul>
                 </nav>
             </header><!--Header End -->
             
 
             <footer class="site-bottom">
-                <div class="site-bottom-img">
-                    <img  src="images/footer.png" ></img>
+                <div class="container">
+                    <div class="image-container"></div>
                 </div>
                 <div class="site-bottom-logos">
                     <img src="images/logo-bottom-1.png" />
@@ -80,29 +80,31 @@
                 //Global definition
                 var trigger = $(".mobile-menu-trigger");
                 
-                trigger.on('click', function() {
+                trigger.on('click', function (e) {
+                     e.preventDefault(); 
+                    
                     // Moving the mobile menu up/down
                     $("#mobile-menu-nav").slideToggle();
                     
                     // For mobile menu  trigger functionailty
-                    $('.mobile-menu-trigger .mobile-active').removeClass('mobile-active');
-                    $(this).toggleClass('mobile-active');
+                    $('.mobile-menu-trigger').toggleClass('mobile-active');
+
+                    // For Span color change
+                    $('.mobile-menu-span').toggleClass('active2')
 
                     // For alt icon functionality
-                    $('.mobile-menu-trigger .active').removeClass('active');
-                    $(this).toggleClass('active');
+                    $('.mobile-menu-trigger').toggleClass('active');
                 });
 
                 $(window).on('resize', function(){
                     var win = $(this); //this = window
                         if (win.width() >= 670) { 
                             $('#mobile-menu-nav').css({
-                            display: 'block',
-                            fontSize: 0
+                            display: 'block'
                         });
                         } else {
                             $('#mobile-menu-nav').css({
-                            display: 'none'
+                                display: 'none'
                         });
                     }
                 });
